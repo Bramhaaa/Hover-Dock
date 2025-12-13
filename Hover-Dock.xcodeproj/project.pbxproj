@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0C28F54B2EED639A00E16E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C28F5312EED639900E16E68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C28F5382EED639900E16E68;
+			remoteInfo = "Hover-Dock";
+		};
+		0C28F5552EED639A00E16E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C28F5312EED639900E16E68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C28F5382EED639900E16E68;
+			remoteInfo = "Hover-Dock";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C28F5392EED639900E16E68 /* Hover-Dock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hover-Dock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C28F54A2EED639A00E16E68 /* Hover-DockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hover-DockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C28F5542EED639A00E16E68 /* Hover-DockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hover-DockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0C28F53B2EED639900E16E68 /* Hover-Dock */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Hover-Dock";
+			sourceTree = "<group>";
+		};
+		0C28F54D2EED639A00E16E68 /* Hover-DockTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Hover-DockTests";
+			sourceTree = "<group>";
+		};
+		0C28F5572EED639A00E16E68 /* Hover-DockUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Hover-DockUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C28F5362EED639900E16E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C28F5472EED639A00E16E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C28F5512EED639A00E16E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C28F5302EED639900E16E68 = {
+			isa = PBXGroup;
+			children = (
+				0C28F53B2EED639900E16E68 /* Hover-Dock */,
+				0C28F54D2EED639A00E16E68 /* Hover-DockTests */,
+				0C28F5572EED639A00E16E68 /* Hover-DockUITests */,
+				0C28F53A2EED639900E16E68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C28F53A2EED639900E16E68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C28F5392EED639900E16E68 /* Hover-Dock.app */,
+				0C28F54A2EED639A00E16E68 /* Hover-DockTests.xctest */,
+				0C28F5542EED639A00E16E68 /* Hover-DockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C28F5382EED639900E16E68 /* Hover-Dock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C28F55E2EED639A00E16E68 /* Build configuration list for PBXNativeTarget "Hover-Dock" */;
+			buildPhases = (
+				0C28F5352EED639900E16E68 /* Sources */,
+				0C28F5362EED639900E16E68 /* Frameworks */,
+				0C28F5372EED639900E16E68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0C28F53B2EED639900E16E68 /* Hover-Dock */,
+			);
+			name = "Hover-Dock";
+			packageProductDependencies = (
+			);
+			productName = "Hover-Dock";
+			productReference = 0C28F5392EED639900E16E68 /* Hover-Dock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C28F5492EED639A00E16E68 /* Hover-DockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C28F5612EED639A00E16E68 /* Build configuration list for PBXNativeTarget "Hover-DockTests" */;
+			buildPhases = (
+				0C28F5462EED639A00E16E68 /* Sources */,
+				0C28F5472EED639A00E16E68 /* Frameworks */,
+				0C28F5482EED639A00E16E68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C28F54C2EED639A00E16E68 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0C28F54D2EED639A00E16E68 /* Hover-DockTests */,
+			);
+			name = "Hover-DockTests";
+			packageProductDependencies = (
+			);
+			productName = "Hover-DockTests";
+			productReference = 0C28F54A2EED639A00E16E68 /* Hover-DockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C28F5532EED639A00E16E68 /* Hover-DockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C28F5642EED639A00E16E68 /* Build configuration list for PBXNativeTarget "Hover-DockUITests" */;
+			buildPhases = (
+				0C28F5502EED639A00E16E68 /* Sources */,
+				0C28F5512EED639A00E16E68 /* Frameworks */,
+				0C28F5522EED639A00E16E68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C28F5562EED639A00E16E68 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0C28F5572EED639A00E16E68 /* Hover-DockUITests */,
+			);
+			name = "Hover-DockUITests";
+			packageProductDependencies = (
+			);
+			productName = "Hover-DockUITests";
+			productReference = 0C28F5542EED639A00E16E68 /* Hover-DockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C28F5312EED639900E16E68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					0C28F5382EED639900E16E68 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					0C28F5492EED639A00E16E68 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 0C28F5382EED639900E16E68;
+					};
+					0C28F5532EED639A00E16E68 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 0C28F5382EED639900E16E68;
+					};
+				};
+			};
+			buildConfigurationList = 0C28F5342EED639900E16E68 /* Build configuration list for PBXProject "Hover-Dock" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C28F5302EED639900E16E68;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0C28F53A2EED639900E16E68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C28F5382EED639900E16E68 /* Hover-Dock */,
+				0C28F5492EED639A00E16E68 /* Hover-DockTests */,
+				0C28F5532EED639A00E16E68 /* Hover-DockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C28F5372EED639900E16E68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C28F5482EED639A00E16E68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C28F5522EED639A00E16E68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C28F5352EED639900E16E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C28F5462EED639A00E16E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C28F5502EED639A00E16E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C28F54C2EED639A00E16E68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C28F5382EED639900E16E68 /* Hover-Dock */;
+			targetProxy = 0C28F54B2EED639A00E16E68 /* PBXContainerItemProxy */;
+		};
+		0C28F5562EED639A00E16E68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C28F5382EED639900E16E68 /* Hover-Dock */;
+			targetProxy = 0C28F5552EED639A00E16E68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C28F55C2EED639A00E16E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C28F55D2EED639A00E16E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		0C28F55F2EED639A00E16E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hover-Dock/Hover_Dock.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hover-Dock/Preview Content\"";
+				DEVELOPMENT_TEAM = 9V2VZC2PXX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "generalBR.Hover-Dock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0C28F5602EED639A00E16E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hover-Dock/Hover_Dock.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hover-Dock/Preview Content\"";
+				DEVELOPMENT_TEAM = 9V2VZC2PXX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "generalBR.Hover-Dock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0C28F5622EED639A00E16E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V2VZC2PXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "generalBR.Hover-DockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hover-Dock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hover-Dock";
+			};
+			name = Debug;
+		};
+		0C28F5632EED639A00E16E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V2VZC2PXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "generalBR.Hover-DockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hover-Dock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hover-Dock";
+			};
+			name = Release;
+		};
+		0C28F5652EED639A00E16E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V2VZC2PXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "generalBR.Hover-DockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Hover-Dock";
+			};
+			name = Debug;
+		};
+		0C28F5662EED639A00E16E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V2VZC2PXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "generalBR.Hover-DockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Hover-Dock";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C28F5342EED639900E16E68 /* Build configuration list for PBXProject "Hover-Dock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C28F55C2EED639A00E16E68 /* Debug */,
+				0C28F55D2EED639A00E16E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C28F55E2EED639A00E16E68 /* Build configuration list for PBXNativeTarget "Hover-Dock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C28F55F2EED639A00E16E68 /* Debug */,
+				0C28F5602EED639A00E16E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C28F5612EED639A00E16E68 /* Build configuration list for PBXNativeTarget "Hover-DockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C28F5622EED639A00E16E68 /* Debug */,
+				0C28F5632EED639A00E16E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C28F5642EED639A00E16E68 /* Build configuration list for PBXNativeTarget "Hover-DockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C28F5652EED639A00E16E68 /* Debug */,
+				0C28F5662EED639A00E16E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C28F5312EED639900E16E68 /* Project object */;
+}
