@@ -8,29 +8,104 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var dockDetector: DockDetector
+    @EnvironmentObject var permissionsManager: PermissionsManager
+    @EnvironmentObject var dockIconDetector: DockIconDetector
+    @EnvironmentObject var windowDiscovery: WindowDiscovery
+    @EnvironmentObject var thumbnailCapture: ThumbnailCapture
+    @EnvironmentObject var previewOverlay: PreviewOverlayController
     
     var body: some View {
         VStack(spacing: 20) {
             // App Icon
             Image(systemName: "dock.rectangle")
                 .font(.system(size: 60))
-                .foregroundStyle(dockDetector.isHoveringDock ? .green : .gray)
+                .foregroundStyle(dockIconDetector.hoveredApp != nil ? .green : .gray)
             
             // App Title
             Text("HoverDock")
                 .font(.title)
                 .fontWeight(.bold)
             
+            // Permissions Status
+            if !permissionsManager.hasAllRequiredPermissions() {
+                VStack(spacing: 12) {
+                    Text("⚠️ Missing Permissions")
+                        .font(.headline)
+                        .foregroundStyle(.orange)
+                    
+                    VStack(alignment: .leading, spacing: 8) {
+                        if !permissionsManager.hasAccessibilityPermission {
+                            HStack {
+                                Image(systemName: "xmark.circle")
+                                    .foregroundStyle(.red)
+                                Text("Accessibility")
+                                Spacer()
+                                Button("Grant") {
+                                    permissionsManager.requestAccessibilityPermission()
+                                }
+                                .buttonStyle(.borderedProminent)
+                            }
+                        }
+                        
+                        if !permissionsManager.hasScreenRecordingPermission {
+                            HStack {
+                                Image(systemName: "xmark.circle")
+                                    .foregroundStyle(.red)
+                                Text("Screen Recording")
+                                Spacer()
+                                Button("Grant") {
+                                    permissionsManager.requestScreenRecordingPermission()
+                                }
+                                .buttonStyle(.borderedProminent)
+                            }
+                        }
+                    }
+                    .padding()
+                    .background(Color.orange.opacity(0.1))
+                    .cornerRadius(8)
+                }
+                
+                Divider()
+            }
+            
             // Status
             VStack(spacing: 8) {
-                Text("Dock Position: \(dockDetector.dockPosition.rawValue.capitalized)")
+                let dockPosition = DockUtils.getDockPosition()
+                Text("Dock Position: \(dockPosition.displayName)")
                     .font(.headline)
                 
-                Text(dockDetector.isHoveringDock ? "🟢 Hovering Dock" : "⚪️ Not Hovering")
+                Text(dockIconDetector.hoveredApp != nil ? "🟢 Hovering Dock Icon" : "⚪️ Not Hovering")
                     .font(.title2)
                     .fontWeight(.semibold)
-                    .foregroundStyle(dockDetector.isHoveringDock ? .green : .secondary)
+                    .foregroundStyle(dockIconDetector.hoveredApp != nil ? .green : .secondary)
+                
+                // Show hovered app
+                if let app = dockIconDetector.hoveredApp {
+                    Text("Hovering: \(app.localizedName ?? "Unknown")")
+                        .font(.caption)
+                        .foregroundStyle(.blue)
+                        .padding(.top, 4)
+                    
+                    // Show window count and preview status
+                    let windows = windowDiscovery.discoveredWindows
+                    if !windows.isEmpty {
+                        Text("\(windows.count) window(s)")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                        
+                        if previewOverlay.isVisible {
+                            Text("Preview: Showing")
+                                .font(.caption2)
+                                .foregroundStyle(.green)
+                        }
+                    }
+                    
+                    // Capture thumbnails for testing
+                    if thumbnailCapture.isCapturing {
+                        ProgressView()
+                            .scaleEffect(0.5)
+                    }
+                }
             }
             
             Divider()
@@ -38,7 +113,7 @@ struct ContentView: View {
             
             // Instructions
             VStack(alignment: .leading, spacing: 8) {
-                Text("Status: Active")
+                Text("Status: \(permissionsManager.hasAllRequiredPermissions() ? "Active" : "Waiting for permissions")")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                 
@@ -49,11 +124,55 @@ struct ContentView: View {
             }
         }
         .padding(30)
-        .frame(minWidth: 400, minHeight: 300)
+        .frame(minWidth: 400, minHeight: 400)
+        .onAppear {
+            setupPreviewOverlay()
+        }
+        .onChange(of: dockIconDetector.hoveredApp) { oldValue, newValue in
+            handleHoveredAppChange(newValue)
+        }
+    }
+    
+    private func setupPreviewOverlay() {
+        // Set up callbacks
+        previewOverlay.onWindowFocus = { windowInfo in
+            windowDiscovery.focusWindow(windowInfo)
+        }
+        
+        previewOverlay.onWindowClose = { windowInfo in
+            windowDiscovery.closeWindow(windowInfo)
+        }
+        
+        previewOverlay.onWindowMinimize = { windowInfo in
+            windowDiscovery.minimizeWindow(windowInfo)
+        }
+    }
+    
+    private func handleHoveredAppChange(_ app: NSRunningApplication?) {
+        guard let app = app else {
+            previewOverlay.hide()
+            return
+        }
+        
+        // Capture the icon center NOW (before async operations)
+        let capturedIconCenter = dockIconDetector.hoveredIconCenter
+        
+        // Discover windows for the app
+        let windows = windowDiscovery.discoverWindows(for: app)
+        
+        guard !windows.isEmpty else {
+            previewOverlay.hide()
+            return
+        }
+        
+        // Capture thumbnails
+        thumbnailCapture.captureThumbnails(for: windows) { [self] capturedThumbnails in
+            // Show preview overlay with thumbnails at the captured icon position
+            previewOverlay.show(for: app, windows: windows, thumbnails: capturedThumbnails, iconCenter: capturedIconCenter)
+        }
     }
 }
 
 #Preview {
     ContentView()
-        .environmentObject(DockDetector())
 }

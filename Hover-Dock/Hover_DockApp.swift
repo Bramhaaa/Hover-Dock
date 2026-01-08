@@ -12,23 +12,44 @@ import ApplicationServices
 @main
 struct Hover_DockApp: App {
     
-    @StateObject private var dockDetector = DockDetector()
+    @StateObject private var permissionsManager = PermissionsManager.shared
+    @StateObject private var dockIconDetector = DockIconDetector()
+    @StateObject private var windowDiscovery = WindowDiscovery()
+    @StateObject private var thumbnailCapture = ThumbnailCapture()
+    @StateObject private var previewOverlay: PreviewOverlayController
 
     init() {
-        // Check Accessibility permission
-        let trusted = AXIsProcessTrusted()
-        print("Accessibility trusted:", trusted)
+        // Initialize preview overlay without DockDetector
+        let overlay = PreviewOverlayController()
+        _previewOverlay = StateObject(wrappedValue: overlay)
         
-        if !trusted {
-            print("⚠️ HoverDock requires Accessibility permission to function.")
-            print("Please grant permission in System Settings > Privacy & Security > Accessibility")
+        // IMMEDIATELY trigger accessibility permission prompt
+        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true]
+        let hasAccessibility = AXIsProcessTrustedWithOptions(options as CFDictionary)
+        
+        print("Permissions Status:")
+        print("  Accessibility: \(hasAccessibility ? "✅" : "❌")")
+        
+        if !hasAccessibility {
+            print("⚠️ Accessibility permission prompt should appear now!")
+            print("If not, please manually add this app in:")
+            print("System Settings → Privacy & Security → Accessibility")
+        }
+        
+        // Check all permissions
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            PermissionsManager.shared.checkPermissions()
         }
     }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(dockDetector)
+                .environmentObject(permissionsManager)
+                .environmentObject(dockIconDetector)
+                .environmentObject(windowDiscovery)
+                .environmentObject(thumbnailCapture)
+                .environmentObject(previewOverlay)
         }
     }
 }
